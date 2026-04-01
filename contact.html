@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Heritage & Hide</title>
+    <meta name="description" content="Inquire about custom orders or ask any questions about our handcrafted leather goods.">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: var(--space-20);
+            margin-top: var(--space-12);
+        }
+        .contact-form-box {
+            background: var(--bg-card);
+            padding: var(--space-10);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+        }
+        .info-card {
+            background: var(--bg-secondary);
+            padding: var(--space-8);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 360px) {
+            .contact-form-box {
+                padding: var(--space-6);
+            }
+            .info-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Same as index.html) -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Journal</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-toggles-desktop">
+                    <button class="icon-btn rtl-toggle" title="Toggle RTL"><i data-lucide="languages"></i></button>
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i data-lucide="sun"></i>
+                        <i data-lucide="moon"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="icon-btn hamburger" id="hamburger"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer (Same as index.html) -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="icon-btn close-mobile-nav" id="close-mobile-nav"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="home-2.html">Home 2</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Journal</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <hr style="border: 0; border-top: 1px solid var(--border-color);">
+        <div class="mobile-actions" style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div style="display: flex; gap: var(--space-4);">
+                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="languages"></i> RTL</button>
+                <button class="btn btn-secondary theme-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="sun"></i> Mode</button>
+            </div>
+            <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="section">
+            <div class="container text-center">
+                <h1 class="animate-on-scroll" style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">Connect with the Workshop</h1>
+                <p class="section-subtitle animate-on-scroll">Whether you're inquiring about a custom heirloom or simply have a question about leather care, I'd love to hear from you.</p>
+
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="animate-on-scroll">
+                        <div class="contact-form-box">
+                            <form id="contact-form">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+                                    <div class="form-group">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control" placeholder="John" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Doe" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Subject</label>
+                                    <select class="form-control" required>
+                                        <option value="" disabled selected>Select an Inquiry Type</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="custom">Custom Order Request</option>
+                                        <option value="order">Existing Order Question</option>
+                                        <option value="care">Leather Care Question</option>
+                                        <option value="press">Press & Collaborations</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="6" placeholder="Tell us more about your request..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--space-4);">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="animate-on-scroll" style="text-align: left;">
+                        <h2 style="font-size: var(--text-3xl); margin-bottom: var(--space-10);">Workshop Information</h2>
+                        
+                        <div class="info-card">
+                            <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-1);">The Main Workshop</h4>
+                                <p style="color: var(--text-secondary);">42 Artisan Way<br>Portland, Oregon 97204</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-1);">Direct Line</h4>
+                                <p style="color: var(--text-secondary);">+1 (503) 555-0123<br>Mon-Fri, 9am - 5pm PST</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon"><i data-lucide="mail"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-1);">Email Us</h4>
+                                <p style="color: var(--text-secondary);">workshop@heritageandhide.com<br>info@heritageandhide.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon"><i data-lucide="clock"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-1);">Maker's Hours</h4>
+                                <p style="color: var(--text-secondary);">Monday - Friday: 8am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed for rest</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: var(--space-12); opacity: 0.8;">
+                            <h4 style="text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--text-xs); margin-bottom: var(--space-4);">Follow the Process</h4>
+                            <div style="display: flex; gap: var(--space-4);">
+                                <a href="#" class="icon-btn"><i data-lucide="instagram"></i></a>
+                                <a href="#" class="icon-btn"><i data-lucide="facebook"></i></a>
+                                <a href="#" class="icon-btn"><i data-lucide="twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+                    </a>
+                    <p>Handcrafted leather goods made with passion for those who value authenticity and quality that lasts.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=belts">Belts</a></li>
+                        <li><a href="products.html?category=wallets">Wallets</a></li>
+                        <li><a href="products.html?category=bags">Bags</a></li>
+                    </ul>
+                </div>
+                <!-- ... -->
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#process">The Process</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="about.html#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i data-lucide="instagram" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Instagram</a></li>
+                        <li><a href="#"><i data-lucide="facebook" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Facebook</a></li>
+                        <li><a href="#"><i data-lucide="twitter" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Twitter</a></li>
+                        <li><a href="contact.html">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Heritage & Hide. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>&middot;</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* rtl.css */
+
+/* Base direction set via HTML attribute */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/* RTL-specific adjustments */
+[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .card-content {
+  text-align: right;
+}
+
+[dir="rtl"] .icon-arrow {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .nav-drawer {
+  left: 0;
+  right: auto;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .nav-drawer.active {
+  transform: translateX(0);
+}
+
+/* Mirror padding/margins */
+[dir="rtl"] .has-icon-left {
+  padding-left: 0;
+  padding-right: var(--space-4);
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .product-grid,
+[dir="rtl"] .footer-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .mobile-nav {
+    right: auto;
+    left: -100%;
+    transition: left 0.4s ease;
+}
+
+[dir="rtl"] .mobile-nav.active {
+    left: 0;
+    right: auto;
+}
+
+[dir="rtl"] .close-mobile-nav {
+    right: auto;
+    left: var(--space-6);
+}
+
+/* Mirroring arrows in Lucide icons if needed */
+[dir="rtl"] [data-lucide="arrow-right"] {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] [data-lucide="arrow-left"] {
+    transform: rotate(180deg);
+}

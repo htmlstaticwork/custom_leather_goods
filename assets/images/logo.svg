@@ -1,0 +1,41 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+
+  <g transform="translate(18, 8)">
+
+    <!-- Outer shield -->
+    <path d="M32,2 L60,12 L60,38 Q60,58 32,68 Q4,58 4,38 L4,12 Z"
+      fill="none" stroke="#8B4513" stroke-width="1.8" stroke-linejoin="round"/>
+
+    <!-- Inner shield outline (thinner, inset) -->
+    <path d="M32,9 L53,17 L53,37 Q53,52 32,61 Q11,52 11,37 L11,17 Z"
+      fill="none" stroke="#8B4513" stroke-width="0.7" stroke-linejoin="round" opacity="0.45"/>
+
+    <!-- Decorative top diamond dot -->
+    <polygon points="32,5 34.5,7.5 32,10 29.5,7.5"
+      fill="#8B4513" opacity="0.7"/>
+
+    <!-- H left -->
+    <line x1="17" y1="24" x2="17" y2="48" stroke="#8B4513" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="17" y1="36" x2="26" y2="36" stroke="#8B4513" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="26" y1="24" x2="26" y2="48" stroke="#8B4513" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- Ampersand -->
+    <text x="32" y="43" text-anchor="middle"
+      style="font-family:'Georgia',serif; font-size:13px; font-weight:700; fill:#8B4513;">&amp;</text>
+
+    <!-- H right -->
+    <line x1="38" y1="24" x2="38" y2="48" stroke="#8B4513" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="38" y1="36" x2="47" y2="36" stroke="#8B4513" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="47" y1="24" x2="47" y2="48" stroke="#8B4513" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- Bottom decorative stitch dots -->
+    <circle cx="24" cy="56" r="1.2" fill="#8B4513" opacity="0.5"/>
+    <circle cx="32" cy="59" r="1.2" fill="#8B4513" opacity="0.5"/>
+    <circle cx="40" cy="56" r="1.2" fill="#8B4513" opacity="0.5"/>
+
+    <!-- H&H text -->
+    <text x="80" y="48" text-anchor="start"
+      style="font-family:'Georgia',serif; font-size:40px; font-weight:600; letter-spacing:0.1em; fill:#8B4513;">H&amp;H</text>
+
+  </g>
+</svg>

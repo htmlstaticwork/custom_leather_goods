@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journal | Heritage & Hide</title>
+    <meta name="description" content="Insights into leather craftsmanship, care, and the artisan lifestyle.">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .blog-header {
+            background-color: var(--bg-secondary);
+            padding: var(--space-20) 0;
+            text-align: center;
+        }
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: var(--space-12);
+            margin-bottom: var(--space-20);
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .post-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        .post-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        .post-image img {
+            width:100%; height:100%; object-fit:cover;
+            transition: transform 0.5s;
+        }
+        .post-card:hover .post-image img {
+            transform: scale(1.05);
+        }
+        .post-content {
+            padding: var(--space-6);
+        }
+        .category-tag {
+            text-transform: uppercase;
+            font-size: var(--text-xs);
+            color: var(--color-primary);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-2);
+            display: block;
+        }
+        @media (max-width: 1024px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Same as index.html) -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="blog.html" class="active">Journal</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-toggles-desktop">
+                    <button class="icon-btn rtl-toggle" title="Toggle RTL"><i data-lucide="languages"></i></button>
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i data-lucide="sun"></i>
+                        <i data-lucide="moon"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="icon-btn hamburger" id="hamburger"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer (Same as index.html) -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="icon-btn close-mobile-nav" id="close-mobile-nav"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="home-2.html">Home 2</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="blog.html" class="active">Journal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <hr style="border: 0; border-top: 1px solid var(--border-color);">
+        <div class="mobile-actions" style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div style="display: flex; gap: var(--space-4);">
+                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="languages"></i> RTL</button>
+                <button class="btn btn-secondary theme-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="sun"></i> Mode</button>
+            </div>
+            <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="blog-header">
+            <div class="container animate-on-scroll">
+                <h1 style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">The Journal</h1>
+                <p style="color: var(--text-secondary); max-width: 60ch; margin-inline: auto;">Notes from the workshop, leather care guides, and the philosophy of making.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Featured Post -->
+                <article class="featured-post animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1531423884817-4d0c13f3abee?w=1200&q=80" alt="Featured Post" style="width:100%; height:100%; object-fit:cover;">
+                    <div style="padding: var(--space-12); display:flex; flex-direction:column; justify-content:center;">
+                        <span class="category-tag">Craftsmanship</span>
+                        <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-4);">The Art of the Saddle Stitch</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--space-8);">Why machine stitching will never replace the strength and durability of a hand-placed needle and thread. A deep dive into traditional techniques.</p>
+                        <div style="display:flex; align-items:center; gap: var(--space-4);">
+                            <span style="font-weight:600;">Elias Thorne</span>
+                            <span style="color:var(--text-muted);">October 12, 2025</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="margin-top: var(--space-8); width:fit-content;">Read Full Post</a>
+                    </div>
+                </article>
+
+                <!-- Post Categories -->
+                <div style="display: flex; justify-content: center; gap: var(--space-8); margin-bottom: var(--space-12); flex-wrap: wrap;" class="animate-on-scroll">
+                    <button class="btn btn-secondary" style="border:none; color: var(--text-primary); font-weight: 700; border-bottom: 2px solid var(--color-primary); border-radius: 0;">All Stories</button>
+                    <button class="btn btn-secondary" style="border:none; color: var(--text-secondary); border-radius: 0;">Care & Maintenance</button>
+                    <button class="btn btn-secondary" style="border:none; color: var(--text-secondary); border-radius: 0;">Behind the Scenes</button>
+                    <button class="btn btn-secondary" style="border:none; color: var(--text-secondary); border-radius: 0;">Material Selection</button>
+                </div>
+
+                <!-- Blog Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-8);">
+                    <!-- Post 1 -->
+                    <article class="post-card animate-on-scroll">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Leather Care">
+                        </div>
+                        <div class="post-content">
+                            <span class="category-tag">Care & Maintenance</span>
+                            <h3 style="margin-bottom: var(--space-3);">How to Condition Your Leather for a Lifetime</h3>
+                            <p style="color:var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-6);">Proper care is the secret to a long-lasting patina. Here's our step-by-step guide to cleaning and conditioning.</p>
+                            <a href="#" style="font-weight: 700; color: var(--color-primary); font-size: var(--text-sm);">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="post-card animate-on-scroll">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=600&q=80" alt="Workshop">
+                        </div>
+                        <div class="post-content">
+                            <span class="category-tag">Behind the Scenes</span>
+                            <h3 style="margin-bottom: var(--space-3);">The Tools of the Trade</h3>
+                            <p style="color:var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-6);">A look at the knives, awls, and hammers that have built Heritage & Hide for the last decade.</p>
+                            <a href="#" style="font-weight: 700; color: var(--color-primary); font-size: var(--text-sm);">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="post-card animate-on-scroll">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1519995451813-39e29e054914?w=600&q=80" alt="Materials">
+                        </div>
+                        <div class="post-content">
+                            <span class="category-tag">Material Selection</span>
+                            <h3 style="margin-bottom: var(--space-3);">The Difference: Chrome vs Vegetable Tanned</h3>
+                            <p style="color:var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-6);">Why we choose vegetable-tanned leather and the environmental impact of modern leather production.</p>
+                            <a href="#" style="font-weight: 700; color: var(--color-primary); font-size: var(--text-sm);">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="post-card animate-on-scroll">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Process">
+                        </div>
+                        <div class="post-content">
+                            <span class="category-tag">Behind the Scenes</span>
+                            <h3 style="margin-bottom: var(--space-3);">Developing the Signature Patina</h3>
+                            <p style="color:var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-6);">How daily use transforms your leather into a unique record of your journey.</p>
+                            <a href="#" style="font-weight: 700; color: var(--color-primary); font-size: var(--text-sm);">Read More &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Simple Pagination -->
+                <div style="margin-top: var(--space-16); text-align: center;" class="animate-on-scroll">
+                    <button class="btn btn-secondary">Load More Stories</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+                    </a>
+                    <p>Handcrafted leather goods made with passion for those who value authenticity and quality that lasts.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=belts">Belts</a></li>
+                        <li><a href="products.html?category=wallets">Wallets</a></li>
+                        <li><a href="products.html?category=bags">Bags</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#process">The Process</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="about.html#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i data-lucide="instagram" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Instagram</a></li>
+                        <li><a href="#"><i data-lucide="facebook" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Facebook</a></li>
+                        <li><a href="#"><i data-lucide="twitter" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Twitter</a></li>
+                        <li><a href="contact.html">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Heritage & Hide. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>&middot;</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

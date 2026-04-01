@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Heritage & Hide</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: var(--bg-secondary);
+            padding: var(--space-4);
+        }
+        .auth-card {
+            background: var(--bg-card);
+            width: 100%;
+            max-width: 480px;
+            padding: var(--space-12);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            text-align: center;
+        }
+        .auth-toggles {
+            position: absolute;
+            top: var(--space-6);
+            right: var(--space-6);
+            display: flex;
+            gap: var(--space-2);
+        }
+        [dir="rtl"] .auth-toggles {
+            right: auto;
+            left: var(--space-6);
+        }
+        .auth-logo {
+            margin-bottom: var(--space-8);
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-2);
+            transition: transform var(--transition-fast);
+        }
+        .auth-logo:hover {
+            transform: scale(1.05);
+        }
+        .auth-logo .logo-img {
+            height: 64px;
+        }
+        .input-icon-wrapper {
+            position: relative;
+        }
+        .input-icon-wrapper i {
+            position: absolute;
+            left: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            width: 18px;
+            pointer-events: none;
+        }
+        [dir="rtl"] .input-icon-wrapper i {
+            left: auto;
+            right: var(--space-4);
+        }
+        .input-icon-wrapper .form-control {
+            padding-left: var(--space-12);
+        }
+        [dir="rtl"] .input-icon-wrapper .form-control {
+            padding-left: var(--space-4);
+            padding-right: var(--space-12);
+        }
+        .password-toggle {
+            position: absolute;
+            right: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        [dir="rtl"] .password-toggle {
+            right: auto;
+            left: var(--space-4);
+        }
+        .divider {
+            margin: var(--space-8) 0;
+            position: relative;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: calc(45% - 1.5rem);
+            height: 1px;
+            background-color: var(--border-color);
+        }
+        .divider::before { left: 0; }
+        .divider::after { right: 0; }
+        
+        .social-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-3);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition-base);
+            font-size: var(--text-sm);
+        }
+        .social-google {
+            background-color: white;
+            color: #444;
+            border-color: #ddd;
+        }
+        .social-google:hover {
+            background-color: #f5f5f5;
+        }
+        .social-google i { color: #EA4335; }
+        
+        .social-apple {
+            background-color: #1a1715;
+            color: white;
+        }
+        .social-apple:hover {
+            background-color: black;
+        }
+
+        .social-email {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        .social-email:hover {
+            background-color: var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-card">
+        <div class="auth-toggles">
+            <button class="icon-btn rtl-toggle" title="Toggle RTL"><i data-lucide="languages"></i></button>
+            <button class="icon-btn theme-toggle" title="Toggle Theme">
+                <i data-lucide="sun"></i>
+                <i data-lucide="moon"></i>
+            </button>
+        </div>
+
+        <a href="index.html" class="auth-logo">
+            <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+            <span style="font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: var(--space-2);">Heritage & Hide</span>
+        </a>
+
+        <form>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <div class="input-icon-wrapper">
+                        <i data-lucide="user"></i>
+                        <input type="text" class="form-control" placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <div class="input-icon-wrapper">
+                        <i data-lucide="user"></i>
+                        <input type="text" class="form-control" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: var(--space-4);">
+                <div class="input-icon-wrapper">
+                    <i data-lucide="mail"></i>
+                    <input type="email" class="form-control" placeholder="Email Address" required>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: var(--space-4);">
+                <div class="input-icon-wrapper">
+                    <i data-lucide="lock"></i>
+                    <input type="password" class="form-control" placeholder="Password" required>
+                    <button type="button" class="password-toggle">
+                        <i data-lucide="eye" style="width: 18px;"></i>
+                        <i data-lucide="eye-off" style="width: 18px; display: none;"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: var(--space-6);">
+                <div class="input-icon-wrapper">
+                    <i data-lucide="lock"></i>
+                    <input type="password" class="form-control" placeholder="Confirm Password" required>
+                    <button type="button" class="password-toggle">
+                        <i data-lucide="eye" style="width: 18px;"></i>
+                        <i data-lucide="eye-off" style="width: 18px; display: none;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div style="margin-bottom: var(--space-8); font-size: var(--text-sm); text-align: left;">
+                <label style="display: flex; align-items: center; gap: var(--space-3); cursor: pointer; color: var(--text-secondary);">
+                    <input type="checkbox" style="width: 18px; height: 18px; min-width: 18px; accent-color: var(--color-primary);" required> 
+                    <span>I accept the <a href="#" style="color: var(--color-primary); font-weight: 600;">Terms & Conditions</a></span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--space-4);">Create Heirloom Account</button>
+        </form>
+
+        <div class="divider">or continue with</div>
+
+        <button class="social-btn social-google">
+            <i data-lucide="mail"></i> Continue with Google
+        </button>
+        <button class="social-btn social-apple">
+            <i data-lucide="mail"></i> Continue with Apple
+        </button>
+        <button class="social-btn social-email">
+            <i data-lucide="mail"></i> Continue with Email
+        </button>
+
+        <p style="margin-top: var(--space-8); font-size: var(--text-sm); color: var(--text-secondary);">
+            Already have an account? <a href="login.html" style="color: var(--color-primary); font-weight: 700;">Login</a>
+        </p>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

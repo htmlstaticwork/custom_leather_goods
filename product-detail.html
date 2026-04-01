@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Wallet | Heritage & Hide</title>
+    <meta name="description" content="Handcrafted minimalist leather wallet, designed for durability and a slim profile.">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: var(--space-16);
+            margin-top: var(--space-8);
+        }
+        .gallery-main {
+            aspect-ratio: 1/1;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            background-color: var(--bg-secondary);
+            margin-bottom: var(--space-6);
+        }
+        .gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-4);
+        }
+        .thumb-item {
+            aspect-ratio: 1/1;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color var(--transition-fast);
+        }
+        .thumb-item.active {
+            border-color: var(--color-primary);
+        }
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-meta {
+            margin-bottom: var(--space-8);
+        }
+        .product-price {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: var(--space-4);
+        }
+        .qty-selector {
+            display: flex;
+            align-items: center;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            width: fit-content;
+            margin-bottom: var(--space-6);
+        }
+        .qty-btn {
+            background: none;
+            border: none;
+            padding: var(--space-3) var(--space-5);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .qty-input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            background: none;
+            font-weight: 600;
+            outline: none;
+        }
+        .specs-list {
+            margin-top: var(--space-10);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+        .spec-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            font-size: var(--text-sm);
+        }
+        .spec-label {
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+        @media (max-width: 1024px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Same as index.html) -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Journal</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-toggles-desktop">
+                    <button class="icon-btn rtl-toggle" title="Toggle RTL"><i data-lucide="languages"></i></button>
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i data-lucide="sun"></i>
+                        <i data-lucide="moon"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="icon-btn hamburger" id="hamburger"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer (Same as index.html) -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="icon-btn close-mobile-nav" id="close-mobile-nav"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="home-2.html">Home 2</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <hr style="border: 0; border-top: 1px solid var(--border-color);">
+        <div class="mobile-actions" style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <div style="display: flex; gap: var(--space-4);">
+                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="languages"></i> RTL</button>
+                <button class="btn btn-secondary theme-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="sun"></i> Mode</button>
+            </div>
+            <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="container" style="padding-top: var(--space-6);">
+            <nav style="display: flex; gap: var(--space-2); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6);">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <span style="color: var(--text-primary);">Minimalist Wallet</span>
+            </nav>
+
+            <div class="product-detail-grid">
+                <!-- Left: Gallery -->
+                <div class="animate-on-scroll">
+                    <div class="gallery-main" id="main-image-container">
+                        <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80" alt="Minimalist Wallet" id="main-image">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="thumb-item active" onclick="updateMainImage(this, 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80')">
+                            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80" alt="View 1">
+                        </div>
+                        <div class="thumb-item" onclick="updateMainImage(this, 'https://images.unsplash.com/photo-1612902456551-333ac5afa26e?w=800&q=80')">
+                            <img src="https://images.unsplash.com/photo-1612902456551-333ac5afa26e?w=800&q=80" alt="View 2">
+                        </div>
+                        <div class="thumb-item" onclick="updateMainImage(this, 'https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=800&q=80')">
+                            <img src="https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=800&q=80" alt="View 3">
+                        </div>
+                        <div class="thumb-item" onclick="updateMainImage(this, 'https://images.unsplash.com/photo-1591561954557-26941169b49e?w=800&q=80')">
+                            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=800&q=80" alt="View 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="animate-on-scroll">
+                    <div class="product-meta">
+                        <span style="text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--text-xs); color: var(--color-primary); font-weight: 700;">Wallets & Small Goods</span>
+                        <h1 style="font-size: var(--text-4xl); margin: var(--space-2) 0 var(--space-4);">Signature Minimalist Wallet</h1>
+                        <p class="product-price">$45.00</p>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">Our best-selling minimalist design. Hand-cut from premium 4oz vegetable-tanned leather and hand-stitched for a lifetime of use. Designed to carry 4-6 cards and folded cash without adding bulk to your pocket.</p>
+                    </div>
+
+                    <div class="qty-selector">
+                        <button class="qty-btn minus"><i data-lucide="minus" style="width: 16px;"></i></button>
+                        <input type="number" value="1" class="qty-input" readonly>
+                        <button class="qty-btn plus"><i data-lucide="plus" style="width: 16px;"></i></button>
+                    </div>
+
+                    <div style="display: flex; gap: var(--space-4); flex-direction: column;">
+                        <button class="btn btn-primary" style="padding: var(--space-5);">Add to Collection</button>
+                        <a href="contact.html?subject=Custom Order: Minimalist Wallet" class="btn btn-secondary">Request Custom Leather/Thread</a>
+                    </div>
+
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-label">Material</span>
+                            <span>Full-grain Veg-Tanned Leather</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Stitching</span>
+                            <span>Hand-stitched Waxed Thread</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Dimensions</span>
+                            <span>3.0" x 4.25" x 0.2"</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Capacity</span>
+                            <span>4-8 Cards + Cash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="section" style="margin-top: var(--space-20); border-top: 1px solid var(--border-color);">
+                <h2 class="section-title animate-on-scroll">Complete Your Carry</h2>
+                <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-8); margin-top: var(--space-12);">
+                    <div class="product-card animate-on-scroll" style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1612902456551-333ac5afa26e?w=800&q=80" alt="Wallet 2" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div style="padding: var(--space-6); text-align: center;">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Executive Bifold</h3>
+                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">$85.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card animate-on-scroll" style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=800&q=80" alt="Wallet 3" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div style="padding: var(--space-6); text-align: center;">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Slim Cardholder</h3>
+                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">$35.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card animate-on-scroll" style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=800&q=80" alt="Wallet 4" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div style="padding: var(--space-6); text-align: center;">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Premium Wrap Wallet</h3>
+                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">$55.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+                    </a>
+                    <p>Handcrafted leather goods made with passion for those who value authenticity and quality that lasts.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=belts">Belts</a></li>
+                        <li><a href="products.html?category=wallets">Wallets</a></li>
+                        <li><a href="products.html?category=bags">Bags</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#process">The Process</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="about.html#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i data-lucide="instagram" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Instagram</a></li>
+                        <li><a href="#"><i data-lucide="facebook" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Facebook</a></li>
+                        <li><a href="#"><i data-lucide="twitter" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Twitter</a></li>
+                        <li><a href="contact.html">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Heritage & Hide. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>&middot;</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function updateMainImage(thumb, url) {
+            document.getElementById('main-image').src = url;
+            document.querySelectorAll('.thumb-item').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+    </script>
+</body>
+</html>

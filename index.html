@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage & Hide | Handcrafted Leather Goods</title>
+    <meta name="description" content="Artisanal, handcrafted leather goods including belts, wallets, and bags made to last generations.">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Journal</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-toggles-desktop">
+                    <button class="icon-btn rtl-toggle" title="Toggle RTL"><i data-lucide="languages"></i></button>
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i data-lucide="sun"></i>
+                        <i data-lucide="moon"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-primary" id="login-btn">Login</a>
+                <button class="icon-btn hamburger" id="hamburger"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="icon-btn close-mobile-nav" id="close-mobile-nav"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="home-2.html">Home 2</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <hr style="border: 0; border-top: 1px solid var(--border-color);">
+        <div class="mobile-actions" style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div style="display: flex; gap: var(--space-4);">
+                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="languages"></i> RTL</button>
+                <button class="btn btn-secondary theme-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="sun"></i> Mode</button>
+            </div>
+            <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="hero-section" style="position: relative; height: 90vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #000;">
+            <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1531423884817-4d0c13f3abee?w=1920&q=80') center/cover no-repeat; opacity: 0.6;"></div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
+                <h1 style="font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: var(--space-4); letter-spacing: 0.05em;" class="animate-on-scroll">MADE TO LAST GENERATIONS</h1>
+                <p style="font-size: var(--text-xl); margin-bottom: var(--space-8); max-width: 60ch; margin-inline: auto;" class="animate-on-scroll">Handcrafted artisanal leather goods, small-batch production, and a lifetime commitment to quality.</p>
+                <div class="hero-ctas animate-on-scroll" style="display: flex; gap: var(--space-4); justify-content: center;">
+                    <a href="products.html" class="btn btn-primary">Shop Collection</a>
+                    <a href="about.html" class="btn btn-secondary" style="border-color: white; color: white;">Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Featured Products -->
+        <section class="section">
+            <div class="container text-center">
+                <h2 class="section-title animate-on-scroll">Signature Pieces</h2>
+                <p class="section-subtitle animate-on-scroll">Our most-loved handcrafted essentials, built for the journey ahead.</p>
+                
+                <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-10);">
+                    <!-- Product 1 -->
+                    <div class="product-card animate-on-scroll" style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80" alt="Brown Leather Belt" style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                        <div style="padding: var(--space-6);">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Heritage Belt</h3>
+                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">$85.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card animate-on-scroll" style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80" alt="Leather Wallet" style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                        <div style="padding: var(--space-6);">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Minimalist Wallet</h3>
+                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">$45.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card animate-on-scroll" style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80" alt="Leather Messenger" style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                        <div style="padding: var(--space-6);">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Artisan Messenger Bag</h3>
+                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">$240.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Our Craft -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;">
+                    <div class="animate-on-scroll">
+                        <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-6);">Craftsmanship Without Compromise</h2>
+                        <p style="margin-bottom: var(--space-6); color: var(--text-secondary);">Each piece is hand-cut, hand-stitched, and hand-finished in our small workshop. We use only the finest full-grain vegetable-tanned leather, which develops a unique patina over time, telling the story of your life.</p>
+                        <p style="margin-bottom: var(--space-8); color: var(--text-secondary);">No machines, no shortcuts. Just patience, skill, and the best materials available.</p>
+                        <a href="about.html" class="btn btn-primary">Read Our Story</a>
+                    </div>
+                    <div class="animate-on-scroll" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl);">
+                        <img src="https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=800&q=80" alt="Artisan Workspace" style="width: 100%; height: 500px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Product Categories -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Shop by Category</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10);" class="category-grid">
+                    <a href="products.html?category=belts" class="category-card animate-on-scroll" style="position: relative; height: 400px; border-radius: var(--radius-lg); overflow: hidden; display: block;">
+                        <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80" alt="Belts" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: var(--space-8); background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; text-align: center;">
+                            <h3 style="font-size: var(--text-2xl);">Belts</h3>
+                        </div>
+                    </a>
+                    <a href="products.html?category=wallets" class="category-card animate-on-scroll" style="position: relative; height: 400px; border-radius: var(--radius-lg); overflow: hidden; display: block;">
+                        <img src="https://images.unsplash.com/photo-1612902456551-333ac5afa26e?w=800&q=80" alt="Wallets" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: var(--space-8); background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; text-align: center;">
+                            <h3 style="font-size: var(--text-2xl);">Wallets</h3>
+                        </div>
+                    </a>
+                    <a href="products.html?category=bags" class="category-card animate-on-scroll" style="position: relative; height: 400px; border-radius: var(--radius-lg); overflow: hidden; display: block;">
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80" alt="Bags" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: var(--space-8); background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; text-align: center;">
+                            <h3 style="font-size: var(--text-2xl);">Bags</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Testimonials -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <div class="container text-center">
+                <h2 class="section-title animate-on-scroll">From the Community</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); margin-top: var(--space-12);">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card animate-on-scroll" style="background: var(--bg-card); padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4);">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" alt="User" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary);">
+                            <p style="font-style: italic; color: var(--text-secondary);">"The quality of this belt is lightyears ahead of anything you'd find in a department store. You can feel the weight and the care that went into it."</p>
+                            <div>
+                                <h4 style="margin: 0;">Arthur Morgan</h4>
+                                <span style="font-size: var(--text-sm); color: var(--text-muted);">Heritage Belt</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card animate-on-scroll" style="background: var(--bg-card); padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4);">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80" alt="User" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary);">
+                            <p style="font-style: italic; color: var(--text-secondary);">"I bought a tote bag two years ago and it looks even better today. The patina is gorgeous. Truly an heirloom piece."</p>
+                            <div>
+                                <h4 style="margin: 0;">Elena Fisher</h4>
+                                <span style="font-size: var(--text-sm); color: var(--text-muted);">Artisan Tote</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card animate-on-scroll" style="background: var(--bg-card); padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4);">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80" alt="User" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary);">
+                            <p style="font-style: italic; color: var(--text-secondary);">"The customer service was as handcrafted as the wallet. They helped me choose the right leather and kept me updated through the process."</p>
+                            <div>
+                                <h4 style="margin: 0;">Joel Miller</h4>
+                                <span style="font-size: var(--text-sm); color: var(--text-muted);">Bifold Wallet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: CTA Banner -->
+        <section class="section">
+            <div class="container">
+                <div class="animate-on-scroll" style="background: var(--color-secondary); padding: var(--space-20); border-radius: var(--radius-xl); text-align: center; color: white; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top:0; left:0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1519995451813-39e29e054914?w=1200&q=80') center/cover no-repeat; opacity: 0.1;"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-4);">Ready for Something Unique?</h2>
+                        <p style="font-size: var(--text-lg); margin-bottom: var(--space-8); max-width: 60ch; margin-inline: auto; opacity: 0.9;">We take commissions for custom belts, wallets, and bags. Let's create your next signature piece together.</p>
+                        <a href="contact.html" class="btn btn-primary">Inquire About Custom Orders</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
+                    </a>
+                    <p>Handcrafted leather goods made with passion for those who value authenticity and quality that lasts.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=belts">Belts</a></li>
+                        <li><a href="products.html?category=wallets">Wallets</a></li>
+                        <li><a href="products.html?category=bags">Bags</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#process">The Process</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="about.html#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i data-lucide="instagram" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Instagram</a></li>
+                        <li><a href="#"><i data-lucide="facebook" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Facebook</a></li>
+                        <li><a href="#"><i data-lucide="twitter" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Twitter</a></li>
+                        <li><a href="contact.html">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Heritage & Hide. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>&middot;</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
