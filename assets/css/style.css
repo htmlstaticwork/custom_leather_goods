@@ -513,6 +513,9 @@ button, input, select, textarea {
   .nav-links, .nav-toggles-desktop {
     display: none;
   }
+  #login-btn {
+    display: none;
+  }
   .hamburger {
     display: flex;
   }
