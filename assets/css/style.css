@@ -498,6 +498,69 @@ button, input, select, textarea {
   box-shadow: 0 0 0 4px rgba(139, 69, 19, 0.1);
 }
 
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--color-black);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../images/hero-bg.png') center/cover no-repeat;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+}
+
+.hero-subtitle {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-8);
+  max-width: 60ch;
+  margin-inline: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-ctas .btn {
+    width: 200px;
+  }
+}
+
 /* Grid Utilities */
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
