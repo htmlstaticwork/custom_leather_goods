@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +14,21 @@
     <style>
         .about-hero {
             height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-align: center;
         }
+
         .timeline {
             position: relative;
             max-width: 800px;
             margin: var(--space-20) auto;
             padding: 0 var(--space-6);
         }
+
         .timeline::after {
             content: '';
             position: absolute;
@@ -36,12 +39,14 @@
             left: 50%;
             margin-left: -1px;
         }
+
         .timeline-item {
             padding: var(--space-4) var(--space-10);
             position: relative;
             background-color: inherit;
             width: 50%;
         }
+
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -54,10 +59,20 @@
             border-radius: 50%;
             z-index: 1;
         }
-        .left { left: 0; text-align: right; }
-        .right { left: 50%; }
-        .right::after { left: -10px; }
-        
+
+        .left {
+            left: 0;
+            text-align: right;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
         .timeline-content {
             padding: var(--space-6) var(--space-8);
             background-color: var(--bg-card);
@@ -67,25 +82,62 @@
         }
 
         @media (max-width: 768px) {
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
-            .timeline-item::after { left: 21px; }
-            .right { left: 0; }
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+                text-align: left;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .right {
+                left: 0;
+            }
         }
+
         .workshop-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-4);
             margin-top: var(--space-12);
         }
+
         .workshop-gallery img {
             width: 100%;
             height: 300px;
             object-fit: cover;
             border-radius: var(--radius-md);
+            transition: all var(--transition-base);
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .workshop-gallery img:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 360px) {
+            .workshop-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2);
+            }
+
+            .workshop-gallery img {
+                height: 180px;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar (Same as index.html) -->
     <header class="header">
@@ -132,8 +184,10 @@
         <hr style="border: 0; border-top: 1px solid var(--border-color);">
         <div class="mobile-actions" style="display: flex; flex-direction: column; gap: var(--space-4);">
             <div style="display: flex; gap: var(--space-4);">
-                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="languages"></i> RTL</button>
-                <button class="btn btn-secondary theme-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="sun"></i> Mode</button>
+                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i
+                        data-lucide="languages"></i> RTL</button>
+                <button class="btn btn-secondary theme-toggle" style="flex: 1; padding: var(--space-3);"><i
+                        data-lucide="sun"></i> Mode</button>
             </div>
             <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
         </div>
@@ -143,7 +197,8 @@
         <section class="about-hero animate-on-scroll">
             <div class="container">
                 <h1 style="font-size: var(--text-6xl);">Rooted in Tradition</h1>
-                <p style="font-size: var(--text-xl); max-width: 60ch; margin-inline: auto; margin-top: var(--space-4);">A decade of perfecting the art of slow-hand craftsmanship.</p>
+                <p style="font-size: var(--text-xl); max-width: 60ch; margin-inline: auto; margin-top: var(--space-4);">
+                    A decade of perfecting the art of slow-hand craftsmanship.</p>
             </div>
         </section>
 
@@ -151,8 +206,13 @@
             <div class="container" style="max-width: var(--container-narrow);">
                 <div class="animate-on-scroll" style="text-align: center; margin-bottom: var(--space-20);">
                     <h2 class="section-title">The Heritage Story</h2>
-                    <p style="margin-bottom: var(--space-6);">Heritage & Hide began in 2014 in a small garage workshop in Portland, Oregon. What started as a personal quest to create a belt that wouldn't fall apart after a year turned into a lifelong obsession with functional longevity.</p>
-                    <p style="margin-bottom: var(--space-6);">I spent thousands of hours learning traditional saddlery techniques - the kind of skills that are slowly being forgotten in the age of automation. Today, every piece that leaves our workshop is still made by those same hands, using the same traditional tools.</p>
+                    <p style="margin-bottom: var(--space-6);">Heritage & Hide began in 2014 in a small garage workshop
+                        in Portland, Oregon. What started as a personal quest to create a belt that wouldn't fall apart
+                        after a year turned into a lifelong obsession with functional longevity.</p>
+                    <p style="margin-bottom: var(--space-6);">I spent thousands of hours learning traditional saddlery
+                        techniques - the kind of skills that are slowly being forgotten in the age of automation. Today,
+                        every piece that leaves our workshop is still made by those same hands, using the same
+                        traditional tools.</p>
                 </div>
 
                 <div class="timeline" id="process">
@@ -165,7 +225,8 @@
                     <div class="timeline-item right animate-on-scroll">
                         <div class="timeline-content">
                             <h3>2016</h3>
-                            <p>Launched our Signature Minimalist Collection, gaining recognition for functional simplicity.</p>
+                            <p>Launched our Signature Minimalist Collection, gaining recognition for functional
+                                simplicity.</p>
                         </div>
                     </div>
                     <div class="timeline-item left animate-on-scroll">
@@ -177,21 +238,25 @@
                     <div class="timeline-item right animate-on-scroll">
                         <div class="timeline-content">
                             <h3>2024</h3>
-                            <p>Celebrating a decade of craftsmanship and over 5,000 heirloom pieces commissioned worldwide.</p>
+                            <p>Celebrating a decade of craftsmanship and over 5,000 heirloom pieces commissioned
+                                worldwide.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="animate-on-scroll" style="margin-top: var(--space-20);">
                     <h2 class="section-title">Our Philosophy</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); margin-top: var(--space-10);">
-                        <div>
-                            <h3 style="margin-bottom: var(--space-4);">Quality Above All</h3>
-                            <p>We source our leather from world-renowned tanneries like Horween and Wickett & Craig. We only use full-grain, vegetable-tanned hides because they are the only material that improves with age.</p>
+                    <div
+                        style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); margin-top: var(--space-10);">
+                        <div style="text-align: center;">
+                            <h3 style="margin-bottom: var(--space-4);font-weight: 600;">Quality Above All</h3>
+                            <p>We source our leather from world-renowned tanneries like Horween and Wickett & Craig. We
+                                only use full-grain, vegetable-tanned hides because they are the only material that
+                                improves with age.</p>
                         </div>
-                        <div>
-                            <h3 style="margin-bottom: var(--space-4);">Functional Longevity</h3>
-                            <p>We don't design for trends. We design for the person who wants to buy something once and use it for twenty years. Every design is field-tested for months before release.</p>
+                        <div style="text-align: center;">
+                            <h3 style="margin-bottom: var(--space-4);font-weight: 600;">Functional Longevity</h3>
+                            <p>We don't design for trends. We design for the person who wants to buy something once and
+                                use it for twenty years. Every design is field-tested for months before release.</p>
                         </div>
                     </div>
                 </div>
@@ -203,12 +268,12 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Inside the Workshop</h2>
                 <div class="workshop-gallery animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1515709980177-7a7d628c09ba?w=800&q=80" alt="Workshop 1">
-                    <img src="https://images.unsplash.com/photo-1605511562798-47d0bfb35c8a?w=800&q=80" alt="Workshop 2">
-                    <img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?w=800&q=80" alt="Workshop 3">
-                    <img src="https://images.unsplash.com/photo-1560859251-d563a49c5e4a?w=800&q=80" alt="Workshop 4">
-                    <img src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=800&q=80" alt="Workshop 5">
-                    <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=800&q=80" alt="Workshop 6">
+                    <img src="images/workshop_tools.png" alt="Antique Leatherworking Tools">
+                    <img src="images/workshop_materials.png" alt="Premium Vegetable Tanned Hides">
+                    <img src="images/process_design.png" alt="Artisan Design & Pattern Making">
+                    <img src="images/process_craft.png" alt="Traditional Hand-Stitching">
+                    <img src="images/process_select.png" alt="Material Selection & Quality Check">
+                    <img src="images/process_deliver.png" alt="The Final Heirloom Piece">
                 </div>
             </div>
         </section>
@@ -216,7 +281,10 @@
         <section class="section animate-on-scroll">
             <div class="container text-center">
                 <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-6);">Want to see how it's made?</h2>
-                <p style="margin-bottom: var(--space-10); color: var(--text-secondary); max-width: 60ch; margin-inline: auto;">Follow our journal for behind-the-scenes looks at our process, from material selection to the final stitch.</p>
+                <p
+                    style="margin-bottom: var(--space-10); color: var(--text-secondary); max-width: 60ch; margin-inline: auto;">
+                    Follow our journal for behind-the-scenes looks at our process, from material selection to the final
+                    stitch.</p>
                 <div style="display:flex; justify-content:center; gap: var(--space-4);">
                     <a href="blog.html" class="btn btn-primary">Visit The Journal</a>
                     <a href="products.html" class="btn btn-secondary">Shop the Results</a>
@@ -233,7 +301,8 @@
                     <a href="index.html" class="logo">
                         <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img">
                     </a>
-                    <p>Handcrafted leather goods made with passion for those who value authenticity and quality that lasts.</p>
+                    <p>Handcrafted leather goods made with passion for those who value authenticity and quality that
+                        lasts.</p>
                 </div>
                 <!-- ... other columns same as index.html ... -->
                 <div class="footer-column">
@@ -266,9 +335,15 @@
                 <div class="footer-column">
                     <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><a href="#"><i data-lucide="instagram" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Instagram</a></li>
-                        <li><a href="#"><i data-lucide="facebook" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Facebook</a></li>
-                        <li><a href="#"><i data-lucide="twitter" style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Twitter</a></li>
+                        <li><a href="#"><i data-lucide="instagram"
+                                    style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Instagram</a>
+                        </li>
+                        <li><a href="#"><i data-lucide="facebook"
+                                    style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Facebook</a>
+                        </li>
+                        <li><a href="#"><i data-lucide="twitter"
+                                    style="width: 16px; margin-right: 8px; vertical-align: middle;"></i> Twitter</a>
+                        </li>
                         <li><a href="contact.html">Newsletter</a></li>
                     </ul>
                 </div>
@@ -286,4 +361,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

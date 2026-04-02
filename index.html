@@ -92,61 +92,41 @@
                 <p class="section-subtitle animate-on-scroll">Our most-loved handcrafted essentials, built for the
                     journey ahead.</p>
 
-                <div class="product-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-10);">
+                <div class="product-grid">
                     <!-- Product 1 -->
-                    <div class="product-card animate-on-scroll"
-                        style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                    <div class="product-card animate-on-scroll">
+                        <div class="product-card-image-wrap">
                             <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80"
-                                alt="Brown Leather Belt"
-                                style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s;"
-                                onmouseover="this.style.transform='scale(1.1)'"
-                                onmouseout="this.style.transform='scale(1)'">
+                                alt="Brown Leather Belt">
                         </div>
-                        <div style="padding: var(--space-6);">
-                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Heritage Belt</h3>
-                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">
-                                $85.00</p>
-                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View
-                                Details</a>
+                        <div class="product-card-content">
+                            <h3>Heritage Belt</h3>
+                            <p class="product-card-price">$85.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary">View Details</a>
                         </div>
                     </div>
                     <!-- Product 2 -->
-                    <div class="product-card animate-on-scroll"
-                        style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                    <div class="product-card animate-on-scroll">
+                        <div class="product-card-image-wrap">
                             <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80"
-                                alt="Leather Wallet"
-                                style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s;"
-                                onmouseover="this.style.transform='scale(1.1)'"
-                                onmouseout="this.style.transform='scale(1)'">
+                                alt="Leather Wallet">
                         </div>
-                        <div style="padding: var(--space-6);">
-                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Minimalist Wallet</h3>
-                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">
-                                $45.00</p>
-                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View
-                                Details</a>
+                        <div class="product-card-content">
+                            <h3>Minimalist Wallet</h3>
+                            <p class="product-card-price">$45.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary">View Details</a>
                         </div>
                     </div>
                     <!-- Product 3 -->
-                    <div class="product-card animate-on-scroll"
-                        style="background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                        <div style="aspect-ratio: 1/1; overflow: hidden;">
+                    <div class="product-card animate-on-scroll">
+                        <div class="product-card-image-wrap">
                             <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80"
-                                alt="Leather Messenger"
-                                style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s;"
-                                onmouseover="this.style.transform='scale(1.1)'"
-                                onmouseout="this.style.transform='scale(1)'">
+                                alt="Leather Messenger">
                         </div>
-                        <div style="padding: var(--space-6);">
-                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Artisan Messenger Bag
-                            </h3>
-                            <p style="color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-4);">
-                                $240.00</p>
-                            <a href="product-detail.html" class="btn btn-secondary" style="width: 100%;">View
-                                Details</a>
+                        <div class="product-card-content">
+                            <h3>Artisan Messenger Bag</h3>
+                            <p class="product-card-price">$240.00</p>
+                            <a href="product-detail.html" class="btn btn-secondary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -156,22 +136,25 @@
         <!-- Section 3: Our Craft -->
         <section class="section" style="background-color: var(--bg-secondary);">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;">
-                    <div class="animate-on-scroll">
-                        <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-6);">Craftsmanship Without
+                <div class="craft-grid">
+                    <div class="craft-content animate-on-scroll">
+                        <h2 class="craft-title">Craftsmanship Without
                             Compromise</h2>
-                        <p style="margin-bottom: var(--space-6); color: var(--text-secondary);">Each piece is hand-cut,
-                            hand-stitched, and hand-finished in our small workshop. We use only the finest full-grain
-                            vegetable-tanned leather, which develops a unique patina over time, telling the story of
-                            your life.</p>
-                        <p style="margin-bottom: var(--space-8); color: var(--text-secondary);">No machines, no
-                            shortcuts. Just patience, skill, and the best materials available.</p>
-                        <a href="about.html" class="btn btn-primary">Read Our Story</a>
+                        <div class="craft-text">
+                            <p>
+                                Each piece is hand-cut,
+                                hand-stitched, and hand-finished in our small workshop. We use only the finest
+                                full-grain
+                                vegetable-tanned leather, which develops a unique patina over time, telling the story of
+                                your life.
+                            </p>
+                            <p>No machines, no shortcuts. Just patience, skill, and the best materials available.</p>
+                            <a href="about.html" class="btn btn-primary">Read Our Story</a>
+                        </div>
                     </div>
-                    <div class="animate-on-scroll"
-                        style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl);">
+                    <div class="craft-image-wrap animate-on-scroll">
                         <img src="https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=800&q=80"
-                            alt="Artisan Workspace" style="width: 100%; height: 500px; object-fit: cover;">
+                            alt="Artisan Workspace">
                     </div>
                 </div>
             </div>
@@ -181,35 +164,77 @@
         <section class="section">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Shop by Category</h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10);"
-                    class="category-grid">
-                    <a href="products.html?category=belts" class="category-card animate-on-scroll"
-                        style="position: relative; height: 400px; border-radius: var(--radius-lg); overflow: hidden; display: block;">
-                        <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80" alt="Belts"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                        <div
-                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: var(--space-8); background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; text-align: center;">
-                            <h3 style="font-size: var(--text-2xl);">Belts</h3>
+                <div class="category-grid">
+                    <a href="products.html?category=belts" class="category-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80" alt="Belts">
+                        <div class="category-card-overlay">
+                            <h3>Belts</h3>
                         </div>
                     </a>
-                    <a href="products.html?category=wallets" class="category-card animate-on-scroll"
-                        style="position: relative; height: 400px; border-radius: var(--radius-lg); overflow: hidden; display: block;">
-                        <img src="https://images.unsplash.com/photo-1612902456551-333ac5afa26e?w=800&q=80" alt="Wallets"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                        <div
-                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: var(--space-8); background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; text-align: center;">
-                            <h3 style="font-size: var(--text-2xl);">Wallets</h3>
+                    <a href="products.html?category=wallets" class="category-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1612902456551-333ac5afa26e?w=800&q=80"
+                            alt="Wallets">
+                        <div class="category-card-overlay">
+                            <h3>Wallets</h3>
                         </div>
                     </a>
-                    <a href="products.html?category=bags" class="category-card animate-on-scroll"
-                        style="position: relative; height: 400px; border-radius: var(--radius-lg); overflow: hidden; display: block;">
-                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80" alt="Bags"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                        <div
-                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: var(--space-8); background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; text-align: center;">
-                            <h3 style="font-size: var(--text-2xl);">Bags</h3>
+                    <a href="products.html?category=bags" class="category-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80" alt="Bags">
+                        <div class="category-card-overlay">
+                            <h3>Bags</h3>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Press & Recognition -->
+        <section class="section" style="background-color: var(--bg-secondary); overflow: hidden;">
+            <div class="container">
+                <div class="press-grid">
+                    <!-- Left: Image -->
+                    <div class="press-image-wrap animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1473188588951-666fce8e7c68?w=900&q=80"
+                            alt="Heritage & Hide in the press">
+                        <!-- Floating badge -->
+                        <div class="press-badge">
+                            <span class="press-badge-number">10+</span>
+                            <span class="press-badge-text">Years of Craft</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Press Content -->
+                    <div class="press-content-wrap animate-on-scroll">
+                        <span class="press-label" style="text-align: center; display: block;">Recognition</span>
+                        <h2 class="press-title" style="text-align: center;">Craft That Speaks for Itself</h2>
+                        <p class="press-description">
+                            Our work has been recognized by leading voices in craft, design, and slow living — a
+                            testament to the quality that goes into every stitch.
+                        </p>
+                        <!-- Press logos / names -->
+                        <div class="press-logos">
+                            <div class="press-logo-item">
+                                <span class="press-logo-name">HERITAGE DAILY</span>
+                            </div>
+                            <div class="press-logo-item">
+                                <span class="press-logo-name">THE ARTISAN</span>
+                            </div>
+                            <div class="press-logo-item">
+                                <span class="press-logo-name">SLOW LIVING</span>
+                            </div>
+                            <div class="press-logo-item">
+                                <span class="press-logo-name">CRAFT & STYLE</span>
+                            </div>
+                        </div>
+
+                        <!-- Pull quote -->
+                        <div class="press-quote">
+                            <p class="press-quote-text">
+                                "One of the finest small-batch leather workshops operating today."
+                            </p>
+                            <span class="press-quote-source">— The Artisan Magazine, 2024</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -218,53 +243,46 @@
         <section class="section" style="background-color: var(--bg-secondary);">
             <div class="container text-center">
                 <h2 class="section-title animate-on-scroll">From the Community</h2>
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); margin-top: var(--space-12);">
+                <div class="testimonial-grid">
                     <!-- Testimonial 1 -->
-                    <div class="testimonial-card animate-on-scroll"
-                        style="background: var(--bg-card); padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
-                        <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4);">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-content">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80"
-                                alt="User"
-                                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary);">
-                            <p style="font-style: italic; color: var(--text-secondary);">"The quality of this belt is
+                                alt="User" class="testimonial-avatar">
+                            <p class="testimonial-text">"The quality of this belt is
                                 lightyears ahead of anything you'd find in a department store. You can feel the weight
                                 and the care that went into it."</p>
-                            <div>
-                                <h4 style="margin: 0;">Arthur Morgan</h4>
-                                <span style="font-size: var(--text-sm); color: var(--text-muted);">Heritage Belt</span>
+                            <div class="testimonial-author">
+                                <h4>Arthur Morgan</h4>
+                                <span class="testimonial-product">Heritage Belt</span>
                             </div>
                         </div>
                     </div>
                     <!-- Testimonial 2 -->
-                    <div class="testimonial-card animate-on-scroll"
-                        style="background: var(--bg-card); padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
-                        <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4);">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-content">
                             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80"
-                                alt="User"
-                                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary);">
-                            <p style="font-style: italic; color: var(--text-secondary);">"I bought a tote bag two years
+                                alt="User" class="testimonial-avatar">
+                            <p class="testimonial-text">"I bought a tote bag two years
                                 ago and it looks even better today. The patina is gorgeous. Truly an heirloom piece."
                             </p>
-                            <div>
-                                <h4 style="margin: 0;">Elena Fisher</h4>
-                                <span style="font-size: var(--text-sm); color: var(--text-muted);">Artisan Tote</span>
+                            <div class="testimonial-author">
+                                <h4>Elena Fisher</h4>
+                                <span class="testimonial-product">Artisan Tote</span>
                             </div>
                         </div>
                     </div>
                     <!-- Testimonial 3 -->
-                    <div class="testimonial-card animate-on-scroll"
-                        style="background: var(--bg-card); padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
-                        <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4);">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-content">
                             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80"
-                                alt="User"
-                                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary);">
-                            <p style="font-style: italic; color: var(--text-secondary);">"The customer service was as
+                                alt="User" class="testimonial-avatar">
+                            <p class="testimonial-text">"The customer service was as
                                 handcrafted as the wallet. They helped me choose the right leather and kept me updated
                                 through the process."</p>
-                            <div>
-                                <h4 style="margin: 0;">Joel Miller</h4>
-                                <span style="font-size: var(--text-sm); color: var(--text-muted);">Bifold Wallet</span>
+                            <div class="testimonial-author">
+                                <h4>Joel Miller</h4>
+                                <span class="testimonial-product">Bifold Wallet</span>
                             </div>
                         </div>
                     </div>
