@@ -1169,3 +1169,34 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  z-index: 99;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  transform: translateY(-5px);
+}

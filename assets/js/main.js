@@ -145,4 +145,31 @@ document.addEventListener('DOMContentLoaded', () => {
             input.value = val;
         });
     });
+
+    // --- Back to Top Button ---
+    // Only show on non-auth pages
+    if (!document.querySelector('.auth-card')) {
+        const backToTop = document.createElement('button');
+        backToTop.id = 'back-to-top';
+        backToTop.innerHTML = '<i data-lucide="arrow-up"></i>';
+        backToTop.setAttribute('title', 'Back to Top');
+        document.body.appendChild(backToTop);
+
+        // Re-initialize Lucide for the newly added icon
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
