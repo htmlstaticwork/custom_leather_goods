@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @media (max-width: 360px) {
+            .cta-banner-btn {
+                white-space: nowrap;
+                padding-left: var(--space-4);
+                padding-right: var(--space-4);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -79,8 +88,10 @@
                 <p class="hero-subtitle animate-on-scroll">Handcrafted artisanal leather goods, small-batch production,
                     and a lifetime commitment to quality.</p>
                 <div class="hero-ctas animate-on-scroll">
-                    <a href="products.html" class="btn btn-primary">Shop Collection</a>
-                    <a href="about.html" class="btn btn-secondary" style="border-color: white; color: white;">Our
+                    <a href="products.html" class="btn btn-primary" style="min-width: 200px; text-align: center;">
+                        Collection</a>
+                    <a href="about.html" class="btn btn-secondary"
+                        style="border-color: white; color: white; min-width: 200px; text-align: center;"> Our
                         Story</a>
                 </div>
             </div>
@@ -306,7 +317,7 @@
                             style="font-size: var(--text-lg); margin-bottom: var(--space-8); max-width: 60ch; margin-inline: auto; opacity: 0.9; color: white;">
                             We take commissions for custom belts, wallets, and bags. Let's create your next signature
                             piece together.</p>
-                        <a href="contact.html" class="btn btn-primary">Inquire About Custom Orders</a>
+                        <a href="contact.html" class="btn btn-primary cta-banner-btn">Custom Orders</a>
                     </div>
                 </div>
             </div>
