@@ -52,7 +52,8 @@
         .auth-logo {
             margin-bottom: var(--space-8);
             display: inline-flex;
-            flex-direction: column;
+            flex-direction: row;
+            /* changed from column */
             align-items: center;
             gap: var(--space-2);
             transition: transform var(--transition-fast);
@@ -62,9 +63,6 @@
             transform: scale(1.05);
         }
 
-        .auth-logo .logo-img {
-            height: 40px;
-        }
 
         .input-icon-wrapper {
             position: relative;
@@ -212,7 +210,15 @@
     <div class="auth-card">
 
         <a href="index.html" class="auth-logo">
-            <img src="images/logo.svg" alt="Heritage & Hide Logo" class="logo-img"></a>
+            <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 1L2 6.5v10C2 24.15 7.8 29.8 15 32c7.2-2.2 13-7.85 13-15.5V6.5L15 1Z"
+                    fill="var(--color-primary)" fill-opacity="0.12" stroke="var(--color-primary)" stroke-width="1.6"
+                    stroke-linejoin="round" />
+                <text x="15" y="21" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="11"
+                    font-weight="600" fill="var(--color-primary)" letter-spacing="0.5">HH</text>
+            </svg>
+            <span class="logo-wordmark">H&amp;H</span>
+        </a>
 
 
         <form>

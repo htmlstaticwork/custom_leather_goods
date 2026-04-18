@@ -952,22 +952,23 @@ textarea {
 @media (max-width: 768px) {
   .press-grid {
     display: flex;
-    flex-direction: column-reverse; /* Swaps Image (1st in DOM) and Content (2nd in DOM) */
+    flex-direction: column-reverse;
+    /* Swaps Image (1st in DOM) and Content (2nd in DOM) */
     gap: var(--space-12);
   }
-  
+
   .press-image-wrap img {
     height: 400px;
   }
-  
+
   .press-content-wrap {
     text-align: center;
   }
-  
+
   .press-description {
     margin-inline: auto;
   }
-  
+
   .press-quote {
     text-align: left;
     max-width: 500px;
@@ -1033,16 +1034,16 @@ textarea {
 }
 
 @media (max-width: 900px) {
-    .testimonial-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .testimonial-card:nth-child(3):last-child {
     grid-column: 1 / span 2;
     justify-self: center;
@@ -1054,7 +1055,7 @@ textarea {
   .testimonial-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .testimonial-card:nth-child(3):last-child {
     grid-column: auto;
     width: 100%;
@@ -1199,4 +1200,12 @@ textarea {
 
 #back-to-top:hover {
   transform: translateY(-5px);
-}
+}
+
+.logo-wordmark {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+}
