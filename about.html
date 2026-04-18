@@ -14,13 +14,36 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .about-hero {
-            height: 60vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80') center/cover no-repeat;
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/about-hero.png') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--color-white);
             text-align: center;
+            position: relative;
+        }
+
+        .about-hero-content {
+            z-index: 2;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: var(--space-4);
+            color: var(--color-white);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 500;
+        }
+
+        .about-hero p {
+            font-size: var(--text-xl);
+            max-width: 60ch;
+            margin-inline: auto;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 400;
         }
 
         .timeline {
@@ -158,7 +181,7 @@
 
             <div class="nav-actions">
                 <div class="nav-toggles-desktop">
-                    <button class="icon-btn rtl-toggle" title="Toggle RTL"><i data-lucide="languages"></i></button>
+                    <button class="icon-btn rtl-toggle" title="Toggle RTL"><i data-lucide="arrow-left-right"></i></button>
                     <button class="icon-btn theme-toggle" title="Toggle Theme">
                         <i data-lucide="sun"></i>
                         <i data-lucide="moon"></i>
@@ -185,8 +208,7 @@
         <hr style="border: 0; border-top: 1px solid var(--border-color);">
         <div class="mobile-actions" style="display: flex; flex-direction: column; gap: var(--space-4);">
             <div style="display: flex; gap: var(--space-4);">
-                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i
-                        data-lucide="languages"></i> RTL</button>
+                <button class="btn btn-secondary rtl-toggle" style="flex: 1; padding: var(--space-3);"><i data-lucide="arrow-left-right"></i> RTL</button>
                 <button class="btn btn-secondary theme-toggle" style="flex: 1; padding: var(--space-3);"><i
                         data-lucide="sun"></i> Mode</button>
             </div>
@@ -196,10 +218,9 @@
 
     <main>
         <section class="about-hero animate-on-scroll">
-            <div class="container">
-                <h1 style="font-size: var(--text-6xl);">Rooted in Tradition</h1>
-                <p style="font-size: var(--text-xl); max-width: 60ch; margin-inline: auto; margin-top: var(--space-4);">
-                    A decade of perfecting the art of slow-hand craftsmanship.</p>
+            <div class="container about-hero-content">
+                <h1>Rooted in Tradition</h1>
+                <p>A decade of perfecting the art of slow-hand craftsmanship.</p>
             </div>
         </section>
 
